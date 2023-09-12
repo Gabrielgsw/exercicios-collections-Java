@@ -70,11 +70,25 @@ public class ListaTarefas {
 	
 	
 	public void marcarTarefaConcluida(String descricao) {
-		
+		if(!setTarefa.isEmpty()) {
+			for(Tarefa t : setTarefa) {
+				if(t.getDescricao().equalsIgnoreCase(descricao)) {
+					t.setFoiConcluida(true);
+				}
+			
+			}
+		}
 	}
 	
 	public void marcarTarefaPendente(String descricao) {
-		
+		if(!setTarefa.isEmpty()) {
+			for(Tarefa t : setTarefa) {
+				if(t.getDescricao().equalsIgnoreCase(descricao)) {
+					t.setFoiConcluida(false);
+				}
+			
+			}
+		}
 	}
 	
 	
